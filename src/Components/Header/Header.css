@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+nav .nav-bar a{
+    text-decoration: none;
+    margin: 10px;
+}
