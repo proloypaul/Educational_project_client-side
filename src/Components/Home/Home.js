@@ -2,14 +2,15 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Institute from '../Institute/Institute';
 import Notice from '../Notice/Notice';
+import Header from '../Header/Header'
 
 const Home = () => {
     return (
         <div>
-            <h1>Home section</h1>
+            <Header></Header>
             <Banner></Banner>
             <Institute></Institute>
-            <Notice></Notice>
+            <Notice></Notice> 
         </div>
     );
 };

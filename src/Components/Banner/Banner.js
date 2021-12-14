@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div>
             <div className='banner-container'>
-
+                
             </div>
         </div>
     );
