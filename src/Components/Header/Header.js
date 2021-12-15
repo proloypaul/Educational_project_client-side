@@ -1,10 +1,13 @@
 import { Container } from '@mui/material';
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import UseFirebase from '../../Hooks/UseFirebase'
 import "./Header.css";
 
 const Header = () => {
     const [showBar, setShowBar] = useState(false)
+
+    const {user, signOutProcess} = UseFirebase()
     
     return (
         <div className='navbar-container'>
@@ -21,7 +24,7 @@ const Header = () => {
                             <li><Link to="/teachers">Teachers</Link></li>
                             <li><Link to="/students">Students</Link></li>
                             <li><Link to="/notice">Notice</Link></li>
-                            <li><Link to="/jflfkd">LogIn</Link></li>
+                            <li>{user?.email ? <Link to="/home"><button onClick={signOutProcess}>LogOut</button></Link> : <Link to="/login"><button>LogIn</button></Link>}</li>
                         </ul>
                         
                     </div>
