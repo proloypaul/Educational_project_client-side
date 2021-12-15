@@ -14,7 +14,7 @@ const TeachersHeader = () => {
                     <div className="nav-links">
                         <ul>
                             <li><Link to="/home">Home</Link></li>
-                            <li><Link to="/admission">All Teachers</Link></li>
+                            <li><Link to="/allTeacher">All Teachers</Link></li>
                             <li><Link to="/library">Add Head</Link></li>
                             <li><Link to="/addReview">New Teacher</Link></li>
                             <li><Link to="/contactUs">Manage Students</Link></li>

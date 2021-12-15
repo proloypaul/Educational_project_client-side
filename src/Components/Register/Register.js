@@ -33,7 +33,7 @@ const Register = () => {
             <Container sx={{my: 10}}>
             <h1>Register section</h1>
                 <Paper elevation={12} sx={{py:10}}>
-                    <form onSubmit={handleRegister}>
+                    <form onSubmit={handleRegister} style={{textAlign: "center"}}>
                         <TextField
                             label="Name"
                             type="text"

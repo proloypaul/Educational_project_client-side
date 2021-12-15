@@ -44,7 +44,7 @@ const Login = () => {
             <Container sx={{py:10}}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
-                        <Paper elevation={3}>
+                        <Paper elevation={3} style={{textAlign: "center"}}>
                             <h1 style={{paddingTop:"20px"}}>Login Here Please</h1>
                             <form onSubmit={handleEmailAndPassword}>
                             <TextField
@@ -73,7 +73,7 @@ const Login = () => {
                             <button onClick={() => signInWithGoogle(location, navigate)} style={signInGoogleBtn}>Google SignIn</button>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6} style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
                         <img src={loginImg} alt='Empty' style={{width: "300px"}}/>
                     </Grid>
                 </Grid>
