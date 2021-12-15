@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
@@ -19,13 +19,26 @@ const signInGoogleBtn = {
     cursor:"pointer"
 }
 const Login = () => {
-    const {error, signInWithGoogle} = UseFirebase() 
+    const {error, signInWithGoogle, loginUsingEmailAndPassword} = UseFirebase() 
+    const [logerData, setLogerData] = useState({})
     const navigate = useNavigate()
     const location = useLocation()
 
     const handleEmailAndPassword = (event) => {
         event.preventDefault()
+        loginUsingEmailAndPassword(logerData.email, logerData.password, location, navigate)
+
     }
+    const handleLogerData = (event) => {
+        // console.log(event.target.value)
+        const field = event.target.name;
+        const value = event.target.value;
+        const logerAllData = {...logerData} 
+        logerAllData[field] = value  
+        setLogerData(logerAllData)
+        // console.log(logerAllData)
+    }
+
     return (
         <div style={{background: "whitesmoke"}}>
             <Container sx={{py:10}}>
@@ -37,21 +50,25 @@ const Login = () => {
                             <TextField
                             label="abc@gmail.com"
                             type="email"
+                            name="email"
                             autoComplete="current-password"
                             variant="filled"
+                            onBlur={handleLogerData}
                             style={{width:"80%", marginBottom:"10px"}}
                             />
                             <TextField
                             label="Enter password"
                             type="password"
+                            name="password"
                             autoComplete="current-password"
                             variant="filled"
+                            onBlur={handleLogerData}
                             style={{width:"80%", marginBottom:"10px"}}
                             />
                             <button style={{width:"80%", padding: "8px 0px", fontSize: "16px", fontWeight:"bold"}} type="submit">LogIn</button>
                             </form>
                             
-                            <p>{error}</p>
+                            <p style={{color: "red"}}>{error}</p>
                             <p>Create an Account click here <Link to="/register">Register</Link></p>
                             <button onClick={() => signInWithGoogle(location, navigate)} style={signInGoogleBtn}>Google SignIn</button>
                         </Paper>

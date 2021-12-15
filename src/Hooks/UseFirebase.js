@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initialization from "../Firebase/firebase.init";
 
@@ -18,7 +18,7 @@ const UseFirebase = () => {
             console.log(user)
             setError('')
             const destination = location?.state?.from ||"/"
-            navigate.replace(destination)
+            navigate(destination)
         }).catch(error => {
             setError(error.message)
         })
@@ -46,12 +46,54 @@ const UseFirebase = () => {
             })
     }
 
+    // Register with email and password
+    const RegisterWithEmailAndPasswrod = (email, password, name, navigate) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                // const user = result.user
+                const newUser = {email, displayName: name}
+                setUser(newUser)
+                // console.log(user)
+                console.log(newUser)
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                })
+                    .then(() => {
+                        // Profile updated
+                    }).catch(error => {
+                        setError(error.message)
+                    })
+                navigate('/')
+                setError('')
+            }).catch(error => {
+                setError(error.message)
+            })
+    }
+
+    // sign in with email and password 
+    const loginUsingEmailAndPassword = (email, password, location, navigate) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                const user = result.user
+                setUser(user)
+                setError('')
+                const direction = location?.state?.from ||"/"
+                navigate(direction)
+            }).catch(error => {
+                setError(error.message)
+            }) 
+    } 
+
+
 
     return {
         user,
         error,
         signInWithGoogle,
-        signOutProcess
+        signOutProcess,
+        loginUsingEmailAndPassword,
+        RegisterWithEmailAndPasswrod
+
     }
 }
 

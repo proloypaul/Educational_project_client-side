@@ -7,6 +7,7 @@ import Institute from "./Components/Institute/Institute";
 import NotFind from "./Components/NotFind/NotFind";
 import Notice from "./Components/Notice/Notice";
 import Login from "./Components/Register/Login/Login";
+import Register from "./Components/Register/Register";
 import Students from "./Components/Students/Students";
 import Teachers from "./Components/Teachers/Teachers";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/teachers" element={<Teachers></Teachers>}></Route>
         <Route path="/admission" element={<Admission></Admission>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFind></NotFind>}></Route>
       </Routes>
       <Footer></Footer>
