@@ -2,7 +2,14 @@
     text-align: center;
 }
 .Details .Detials-img img{
-    border: 10px solid springgreen;
+    border: 20px solid black;
+}
+.title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.Details-content{
+    padding: 0px 40px;
 }
 .Details .Details-content .Details-title{
     display: flex;

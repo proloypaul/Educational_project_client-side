@@ -16,6 +16,7 @@ const UseFirebase = () => {
         .then(result => {
             const user = result.user
             console.log(user)
+            saveToUserData(user.displayName, user.email, "PUT")
             setError('')
             const destination = location?.state?.from ||"/"
             navigate(destination)
@@ -50,11 +51,13 @@ const UseFirebase = () => {
     const RegisterWithEmailAndPasswrod = (email, password, name, navigate) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                // const user = result.user
+                const user = result.user
                 const newUser = {email, displayName: name}
                 setUser(newUser)
-                // console.log(user)
-                console.log(newUser)
+                // console.log(name, email)
+                saveToUserData(name, email, "POST")
+                console.log(user)
+                // console.log(newUser)
                 updateProfile(auth.currentUser, {
                     displayName: name
                 })
@@ -83,6 +86,24 @@ const UseFirebase = () => {
                 setError(error.message)
             }) 
     } 
+
+    // save user to database 
+    const saveToUserData = (name, email, method) => {
+        const user = {name, email}
+        console.log(user)
+        const url = `http://localhost:3800/users`
+        fetch(url, {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+
+            })
+    }
 
 
 
