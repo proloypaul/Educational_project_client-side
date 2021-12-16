@@ -1,0 +1,25 @@
+.teachers .teachers-title{
+    border: 2px solid black;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.teachers .teachers-img{
+    text-align: center;
+}
+
+.teachers .teachers-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.teacherBtn{
+    padding: 5px 15px;
+    color: white;
+    background: black;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}

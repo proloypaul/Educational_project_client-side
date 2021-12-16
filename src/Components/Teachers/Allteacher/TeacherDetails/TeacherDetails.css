@@ -1,0 +1,10 @@
+.Details .Detials-img{
+    text-align: center;
+}
+.Details .Detials-img img{
+    border: 10px solid springgreen;
+}
+.Details .Details-content .Details-title{
+    display: flex;
+    justify-content: space-between;
+}

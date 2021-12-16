@@ -10,6 +10,7 @@ import Login from "./Components/Register/Login/Login";
 import Register from "./Components/Register/Register";
 import Students from "./Components/Students/Students";
 import Allteacher from "./Components/Teachers/Allteacher/Allteacher";
+import TeacherDetails from "./Components/Teachers/Allteacher/TeacherDetails/TeacherDetails";
 import Teachers from "./Components/Teachers/Teachers";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/allTeacher" element={<Allteacher></Allteacher>}></Route>
+        <Route path="/teacherDetails/:Id" element={<TeacherDetails></TeacherDetails>}></Route>
         <Route path="*" element={<NotFind></NotFind>}></Route>
       </Routes>
       <Footer></Footer>
