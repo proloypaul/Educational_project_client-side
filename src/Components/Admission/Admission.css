@@ -1,0 +1,65 @@
+.admission-container{
+    background-image: url('../../Images/Bg_images/Bg-Three.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:1200px;
+    color: whitesmoke;
+}
+.single-form{
+    margin: 20px 0px; 
+}
+.admission-title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+.inputStyle{
+    background: #08d4a1;
+    color: whitesmoke;
+    padding: 15px 5px;
+    font-size: 16px;
+    width: 80%;
+    border: 0px;
+    margin: 20px 0px; 
+}
+.gender{
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.selectClass{
+    background: #08d4a1;
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 5px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 50px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.submitBtn{
+    background: #08d4a1;
+    color: whitesmoke;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media (max-width: 690px) {
+    .admission-title{
+        font-size: 16px;
+        padding: 15px 0px;
+    }
+    .inputStyle{
+        font-size: 16px;
+        width: 80%;
+        border: 0px;
+        margin: 16px 0px; 
+    }
+}

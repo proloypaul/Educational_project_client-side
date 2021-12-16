@@ -1,6 +1,7 @@
 import { Container, Grid, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Alert from '@mui/material/Alert';
 import UseFirebase from '../../../../Hooks/UseFirebase';
 import './TeacherDetails.css';
 const TeacherDetails = () => {
@@ -148,7 +149,7 @@ const TeacherDetails = () => {
                                 style={{width:"80%", marginBottom:"10px"}}
                             />
                             <button type='submit' style={{width:"80%", marginBottom:"10px"}}>Confirm Class</button>
-                            {success ? <p></p> : ""}
+                            {success ? <Alert severity="success">Your Class Confirm </Alert>: ""}
                         </form>
                     </Grid>
                 </Grid>
