@@ -7,11 +7,14 @@ initialization()
 const UseFirebase = () => {
     const [user, setUser] = useState([])
     const [error, setError] = useState('')
+    const [isLoading, setIsLoading] = useState(true)
+    const [head, setHead] = useState(false) 
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
 
     // singIn with google
     const signInWithGoogle = (location, navigate) => {
+        setIsLoading(true)
         signInWithPopup(auth, googleProvider)
         .then(result => {
             const user = result.user
@@ -22,18 +25,20 @@ const UseFirebase = () => {
             navigate(destination)
         }).catch(error => {
             setError(error.message)
-        })
+        }).finally(() => setIsLoading(false))
     }
 
     // onAuthStateChanged Login and Logout state change 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if(user){
                 setUser(user)
             }else{
                 setUser({})
             }
+            setIsLoading(false)
         })
+        return () => unsubscribed;
     }, [auth])
 
     // SignOut process 
@@ -49,6 +54,7 @@ const UseFirebase = () => {
 
     // Register with email and password
     const RegisterWithEmailAndPasswrod = (email, password, name, navigate) => {
+        setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user
@@ -70,7 +76,7 @@ const UseFirebase = () => {
                 setError('')
             }).catch(error => {
                 setError(error.message)
-            })
+            }).finally(() => setIsLoading(false))
     }
 
     // sign in with email and password 
@@ -105,11 +111,25 @@ const UseFirebase = () => {
             })
     }
 
+    // check headTeacher using email
+
+    useEffect(() => {
+        const url = `http://localhost:3800/users/${user?.email}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setHead(data.isHead)
+            })
+    }, [user?.email])
+
 
 
     return {
         user,
         error,
+        isLoading,
+        head,
         signInWithGoogle,
         signOutProcess,
         loginUsingEmailAndPassword,
