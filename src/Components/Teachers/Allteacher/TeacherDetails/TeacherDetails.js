@@ -2,10 +2,11 @@ import { Container, Grid, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
-import UseFirebase from '../../../../Hooks/UseFirebase';
 import './TeacherDetails.css';
+import UseAuth from '../../../../Context/UseAuth';
+
 const TeacherDetails = () => {
-    const {user} = UseFirebase()
+    const {user} = UseAuth()
     const initialClassData = {name: user.displayName, email: user.email, class: '', subject: '', day: ''}
     // const id = useParams()
     // console.log(id)

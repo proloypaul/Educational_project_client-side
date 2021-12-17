@@ -1,10 +1,10 @@
 import { Container, Paper, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import UseFirebase from '../../Hooks/UseFirebase';
+import UseAuth from '../../Context/UseAuth';
 
 const Register = () => {
-    const { RegisterWithEmailAndPasswrod, error} = UseFirebase()
+    const { RegisterWithEmailAndPasswrod, error} = UseAuth()
     const [userData, setUserData] = useState({})
     const navigate = useNavigate()
 

@@ -4,8 +4,8 @@ import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-import UseFirebase from '../../../Hooks/UseFirebase';
 import loginImg from '../../../Images/Bg_images/loginImg.png'
+import UseAuth from '../../../Context/UseAuth';
 
 const signInGoogleBtn = {
     padding: "10px 20px",
@@ -19,7 +19,7 @@ const signInGoogleBtn = {
     cursor:"pointer"
 }
 const Login = () => {
-    const {error, signInWithGoogle, loginUsingEmailAndPassword} = UseFirebase() 
+    const {error, signInWithGoogle, loginUsingEmailAndPassword} = UseAuth()
     const [logerData, setLogerData] = useState({})
     const navigate = useNavigate()
     const location = useLocation()

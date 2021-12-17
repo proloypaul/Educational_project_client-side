@@ -62,4 +62,8 @@
         border: 0px;
         margin: 16px 0px; 
     }
+
+    .submitBtn{
+        margin-top: 10px;
+    }
 }

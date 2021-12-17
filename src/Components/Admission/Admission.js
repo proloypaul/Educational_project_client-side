@@ -77,17 +77,17 @@ const Admission = () => {
                             </select>
                             <div>
                             <select className='selectClass' name="PscResult" onBlur={collectAdmissionData}>
-                                <option value="six">You result should be around those result</option>
-                                <option value="six">5.00</option>
-                                <option value="seven">4.50</option>
-                                <option value="eight">4.00</option>
-                                <option value="nine">3.50</option>
+                                <option value="message">You result should be around those result</option>
+                                <option value="5.00">5.00</option>
+                                <option value="4.50">4.50</option>
+                                <option value="4.00">4.00</option>
+                                <option value="3.50">3.50</option>
                             </select>
                             </div>
                         </Grid>
                     </Grid>
                     <div style={{textAlign:"center"}}>
-                        <button type='submit' className='submitBtn'>Submit</button>
+                        <button type='submit' className='submitBtn'>Admit</button>
                     </div>
                     {success ? <Alert severity="success">Your submission done successfuly!</Alert>: ""}
                 </form>
