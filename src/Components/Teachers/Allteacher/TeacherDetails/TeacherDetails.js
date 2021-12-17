@@ -34,7 +34,7 @@ const TeacherDetails = () => {
     }
     const handleClass = event => {
         event.preventDefault()
-        console.log(classData)
+        // console.log(classData)
         const classAllData = {
             ...classData,
             time: teacherData.time,
@@ -149,7 +149,7 @@ const TeacherDetails = () => {
                                 autoComplete="current-password"
                                 style={{width:"80%", marginBottom:"10px"}}
                             />
-                            <button type='submit' style={{width:"80%", marginBottom:"10px"}}>Confirm Class</button>
+                            <button type='submit' style={{width:"80%", marginBottom:"10px"}} className="confirmBtn">Confirm Class</button>
                             {success ? <Alert severity="success">Your Class Confirm </Alert>: ""}
                         </form>
                     </Grid>

@@ -15,6 +15,7 @@ const StudentsHeader = () => {
                         <ul>
                             <li><Link to="/home">Home</Link></li>
                             <li><Link to="/admission">Admission</Link></li>
+                            <li><Link to="/yourClasses">YourClasses</Link></li>
                             <li><Link to="/library">Library</Link></li>
                             <li><Link to="/addReview">Add Review</Link></li>
                             <li><Link to="/contactUs">Contact Us</Link></li>

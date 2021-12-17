@@ -9,6 +9,7 @@ import Notice from "./Components/Notice/Notice";
 import Login from "./Components/Register/Login/Login";
 import Register from "./Components/Register/Register";
 import Students from "./Components/Students/Students";
+import YourClasses from "./Components/Students/YourClasses/YourClasses";
 import AddNotice from "./Components/Teachers/AddNotice/AddNotice";
 import Allteacher from "./Components/Teachers/Allteacher/Allteacher";
 import TeacherDetails from "./Components/Teachers/Allteacher/TeacherDetails/TeacherDetails";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/admission" element={<Admission></Admission>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
+          <Route path="/yourClasses" element={<YourClasses></YourClasses>}></Route>
           <Route path="/allTeacher" element={<Allteacher></Allteacher>}></Route>
           <Route path="/teacherDetails/:Id" element={<PrivateRouter><TeacherDetails></TeacherDetails></PrivateRouter>}></Route>
           <Route path="/addNotice" element={<AddNotice></AddNotice>}></Route>
