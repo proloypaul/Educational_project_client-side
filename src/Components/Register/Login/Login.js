@@ -65,7 +65,7 @@ const Login = () => {
                             onBlur={handleLogerData}
                             style={{width:"80%", marginBottom:"10px"}}
                             />
-                            <button style={{width:"80%", padding: "8px 0px", fontSize: "16px", fontWeight:"bold"}} type="submit">LogIn</button>
+                            <button style={{width:"80%"}} type="submit" className='confirmBtn'>LogIn</button>
                             </form>
                             
                             <p style={{color: "red"}}>{error}</p>

@@ -37,7 +37,7 @@ const YourClasses = () => {
     const [yourClass, setYourClass] = useState([])
 
     useEffect(() => {
-        const url =`http://localhost:3800/classes/${user?.email}`
+        const url =`https://hidden-beyond-75856.herokuapp.com/classes/${user?.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {

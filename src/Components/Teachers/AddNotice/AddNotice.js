@@ -27,7 +27,7 @@ const AddNotice = () => {
 
 
 
-        const url = `http://localhost:3800/notice`
+        const url = `https://hidden-beyond-75856.herokuapp.com/notices`
         fetch(url, {
             method: 'POST',
             body: formData

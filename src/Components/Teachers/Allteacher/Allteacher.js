@@ -7,7 +7,7 @@ const Allteacher = () => {
     const [teachers, setTeachers] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:3800/teachers`
+        const url = `https://hidden-beyond-75856.herokuapp.com/teachers`
         fetch(url)
             .then(res => res.json())
             .then(data => setTeachers(data))

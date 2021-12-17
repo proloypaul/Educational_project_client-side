@@ -18,7 +18,7 @@ const Admission = () => {
     const handleAdmission = event => {
         event.preventDefault()
         // console.log(admissionData)
-        const url = `http://localhost:3800/students`
+        const url = `https://hidden-beyond-75856.herokuapp.com/students`
         fetch(url, {
             method: 'POST',
             headers: {

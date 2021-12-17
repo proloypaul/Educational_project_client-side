@@ -7,7 +7,7 @@ const Notice = () => {
     const [noticeData, setNoticeData] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:3800/notices`
+        const url = `https://hidden-beyond-75856.herokuapp.com/notices`
         fetch(url)
             .then(res => res.json())
             .then(data => {

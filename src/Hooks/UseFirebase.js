@@ -91,7 +91,7 @@ const UseFirebase = () => {
     const saveToUserData = (name, email, method) => {
         const user = {name, email}
         console.log(user)
-        const url = `http://localhost:3800/users`
+        const url = `https://hidden-beyond-75856.herokuapp.com/users`
         fetch(url, {
             method: method,
             headers: {

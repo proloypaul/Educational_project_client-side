@@ -29,7 +29,7 @@ function App() {
           <Route path="/notice" element={<Notice></Notice>}></Route>
           <Route path="/students" element={<Students></Students>}></Route>
           <Route path="/teachers" element={<PrivateRouter><Teachers></Teachers></PrivateRouter>}></Route>
-          <Route path="/admission" element={<Admission></Admission>}></Route>
+          <Route path="/admission" element={<PrivateRouter><Admission></Admission></PrivateRouter>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path="/yourClasses" element={<YourClasses></YourClasses>}></Route>

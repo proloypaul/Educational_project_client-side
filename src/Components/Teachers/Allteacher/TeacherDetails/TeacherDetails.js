@@ -16,7 +16,7 @@ const TeacherDetails = () => {
     const [success, setSuccess] = useState(false)
     
     useEffect(() => {
-        const url = `http://localhost:3800/teachers/${Id}`
+        const url = `https://hidden-beyond-75856.herokuapp.com/teachers/${Id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -41,7 +41,7 @@ const TeacherDetails = () => {
             date: new Date().toLocaleDateString()
         }
         // console.log(classAllData)
-        const url = `http://localhost:3800/classes`
+        const url = `https://hidden-beyond-75856.herokuapp.com/classes`
         fetch(url, {
             method: 'POST',
             headers: {
