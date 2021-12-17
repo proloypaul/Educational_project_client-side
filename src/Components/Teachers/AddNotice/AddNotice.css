@@ -1,0 +1,38 @@
+.notice-container{
+    background-image: url('../../../Images/Bg_images/Bg-Three.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+    color: whitesmoke;
+}
+.notice-title, .notice-description{
+    width: 80%;
+    padding: 10px 5px;
+    font-size: 16px;
+    margin: 10px 0px;
+    border: 0;
+    border-radius: 5px;
+}
+.notice-description{
+    height: 100px;
+}
+.notice-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.img-file{
+    font-size: 16px;
+}
+
+.noticeBtn{
+    background: #000000;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+

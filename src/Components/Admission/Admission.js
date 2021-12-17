@@ -54,20 +54,20 @@ const Admission = () => {
                             <p className='admission-title'>PSC Result :</p>
                         </Grid>
                         <Grid item sm={9} xs={8}>
-                            <input type="text" placeholder="Date/Month/Year" name="entryYear" onBlur={collectAdmissionData} className='inputStyle' required/>
-                            <input type="text" placeholder="Enter Your Name" name="name" onBlur={collectAdmissionData} className='inputStyle' required/>
-                            <input type="text" placeholder="Enter Your Father Name" name="fatherName" onBlur={collectAdmissionData} className='inputStyle'required/>
-                            <input type="text" placeholder="Enter Your Mother Name" name="motherName" onBlur={collectAdmissionData} className='inputStyle'required/>
-                            <input type="number" placeholder="Enter Your Parent Number" name="number" onBlur={collectAdmissionData} className='inputStyle'required/>
-                            <input type="text" placeholder="Pos., Upzila, Distic" name="parmanetAddress" onBlur={collectAdmissionData} className='inputStyle'required/>
-                            <input type="text" placeholder="Pos., Upzila, Distic" name="presentAddress" onBlur={collectAdmissionData} className='inputStyle'required/>
-                            <input type="text" placeholder="Primary School Name" name="primarySchool" onBlur={collectAdmissionData} className='inputStyle'required/>
+                            <input type="text" placeholder="Date/Month/Year" name="entryYear" onChange={collectAdmissionData} className='inputStyle' required/>
+                            <input type="text" placeholder="Enter Your Name" name="name" onChange={collectAdmissionData} className='inputStyle' required/>
+                            <input type="text" placeholder="Enter Your Father Name" name="fatherName" onChange={collectAdmissionData} className='inputStyle'required/>
+                            <input type="text" placeholder="Enter Your Mother Name" name="motherName" onChange={collectAdmissionData} className='inputStyle'required/>
+                            <input type="number" placeholder="Enter Your Parent Number" name="number" onChange={collectAdmissionData} className='inputStyle'required/>
+                            <input type="text" placeholder="Pos., Upzila, Distic" name="parmanetAddress" onChange={collectAdmissionData} className='inputStyle'required/>
+                            <input type="text" placeholder="Pos., Upzila, Distic" name="presentAddress" onChange={collectAdmissionData} className='inputStyle'required/>
+                            <input type="text" placeholder="Primary School Name" name="primarySchool" onChange={collectAdmissionData} className='inputStyle'required/>
                             <div className='gender'>
-                                <input type="radio" name='gender' value="Male" onBlur={collectAdmissionData}/>Male
-                                <input type="radio" name='gender' value="Female" onBlur={collectAdmissionData}/>Female
+                                <input type="radio" name='gender' value="Male" onChange={collectAdmissionData}/>Male
+                                <input type="radio" name='gender' value="Female" onChange={collectAdmissionData}/>Female
                             </div>
 
-                            <select className='selectClass' name="class" onBlur={collectAdmissionData}>
+                            <select className='selectClass' name="class" onChange={collectAdmissionData}>
                                 <option value="six">Which class you want to Admit</option>
                                 <option value="six">Six</option>
                                 <option value="seven">Seven</option>
@@ -76,7 +76,7 @@ const Admission = () => {
                                 <option value="ten">Ten</option>
                             </select>
                             <div>
-                            <select className='selectClass' name="PscResult" onBlur={collectAdmissionData}>
+                            <select className='selectClass' name="PscResult" onChange={collectAdmissionData}>
                                 <option value="message">You result should be around those result</option>
                                 <option value="5.00">5.00</option>
                                 <option value="4.50">4.50</option>

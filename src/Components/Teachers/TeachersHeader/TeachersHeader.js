@@ -15,10 +15,10 @@ const TeachersHeader = () => {
                         <ul>
                             <li><Link to="/home">Home</Link></li>
                             <li><Link to="/allTeacher">All Teachers</Link></li>
-                            <li><Link to="/library">Add Head</Link></li>
-                            <li><Link to="/addReview">New Teacher</Link></li>
-                            <li><Link to="/contactUs">Manage Students</Link></li>
-                            <li><Link to="/contactUs">Add Notice</Link></li>
+                            <li><Link to="/addHead">Add Head</Link></li>
+                            <li><Link to="/new Teacher">New Teacher</Link></li>
+                            <li><Link to="/manageStudents">Manage Students</Link></li>
+                            <li><Link to="/addNotice">Add Notice</Link></li>
                         </ul>  
                     </div>
                 </div>

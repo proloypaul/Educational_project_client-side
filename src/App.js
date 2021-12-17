@@ -9,6 +9,7 @@ import Notice from "./Components/Notice/Notice";
 import Login from "./Components/Register/Login/Login";
 import Register from "./Components/Register/Register";
 import Students from "./Components/Students/Students";
+import AddNotice from "./Components/Teachers/AddNotice/AddNotice";
 import Allteacher from "./Components/Teachers/Allteacher/Allteacher";
 import TeacherDetails from "./Components/Teachers/Allteacher/TeacherDetails/TeacherDetails";
 import Teachers from "./Components/Teachers/Teachers";
@@ -31,7 +32,10 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path="/allTeacher" element={<Allteacher></Allteacher>}></Route>
-          <Route path="/teacherDetails/:Id" element={<TeacherDetails></TeacherDetails>}></Route>
+          <Route path="/teacherDetails/:Id" element={<PrivateRouter><TeacherDetails></TeacherDetails></PrivateRouter>}></Route>
+          <Route path="/addNotice" element={<AddNotice></AddNotice>}></Route>
+          {/* <Route path="/addHead" element={<AddHead></AddHead>}></Route>
+          <Route path="/newTeacher" element={<NewTeacher></NewTeacher>}></Route> */}
           <Route path="*" element={<NotFind></NotFind>}></Route>
         </Routes>
         <Footer></Footer>

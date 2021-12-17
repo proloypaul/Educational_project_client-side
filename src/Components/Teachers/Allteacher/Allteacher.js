@@ -14,8 +14,8 @@ const Allteacher = () => {
     }, [])
     return (
         <div className='teachers-contianer'> 
-            <Container>
-                <h1>Total Teachers {teachers.length}</h1>
+            <Container sx={{py: 10}}>
+                <h1>Teachers</h1>
                 <Grid container spacing={2}>
                     {teachers.map(teacher => <Grid key={teacher._id} item sm={4} xs={12}>
                         <div className='teachers'>

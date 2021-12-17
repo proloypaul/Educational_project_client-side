@@ -1,0 +1,5 @@
+.display-noticeContent, .display-noticeImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
