@@ -1,0 +1,27 @@
+.review-container{
+    background-color: #000000e3;
+    color: white;
+    padding: 20px 0px;
+}
+.review-box{
+    background: #000000;
+    padding: 20px 10px;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+
+
+}
+
+.review-box .reviewImg-two{
+    display: flex;
+    justify-content: center;
+}
+.review-box .reviewImg-two img{
+    padding: 20px 0px;
+    border: 0;
+    border-radius: 50%;
+}
+.review-box .reviewTitle-two{
+    text-align: center;
+}

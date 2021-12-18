@@ -8,6 +8,7 @@ import NotFind from "./Components/NotFind/NotFind";
 import Notice from "./Components/Notice/Notice";
 import Login from "./Components/Register/Login/Login";
 import Register from "./Components/Register/Register";
+import Review from "./Components/Review/Review";
 import AddReview from "./Components/Students/AddReview/AddReview";
 import Library from "./Components/Students/Library/Library";
 import Students from "./Components/Students/Students";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/institute" element={<Institute></Institute>}></Route>
           <Route path="/notice" element={<Notice></Notice>}></Route>
           <Route path="/students" element={<Students></Students>}></Route>
+          <Route path="/review" element={<Review></Review>}></Route>
           <Route path="/teachers" element={<PrivateRouter><Teachers></Teachers></PrivateRouter>}></Route>
           <Route path="/admission" element={<PrivateRouter><Admission></Admission></PrivateRouter>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
