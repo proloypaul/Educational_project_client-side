@@ -6,7 +6,6 @@ const Students = () => {
     return (
         <div>
             <StudentsHeader></StudentsHeader>
-            <h1>Students section</h1>
             <YourClasses></YourClasses>
         </div>
     );

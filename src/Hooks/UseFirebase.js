@@ -96,7 +96,7 @@ const UseFirebase = () => {
     // save user to database 
     const saveToUserData = (name, email, method) => {
         const user = {name, email}
-        console.log(user)
+        // console.log(user)
         const url = `https://hidden-beyond-75856.herokuapp.com/users`
         fetch(url, {
             method: method,
@@ -118,8 +118,8 @@ const UseFirebase = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                setHead(data.isHead)
+                // console.log(data)
+                setHead(data.head)
             })
     }, [user?.email])
 

@@ -43,7 +43,6 @@ const Admission = () => {
                         <Grid item sm={3} xs={4}>
                             <p className='admission-title'>Year of entry :</p>
                             <p className='admission-title'>Full Name :</p>
-                            <p className='admission-title'>Your Email :</p>
                             <p className='admission-title'>Father's Name :</p>
                             <p className='admission-title'>Mother's Name :</p>
                             <p className='admission-title'>Parent Number :</p>
@@ -56,9 +55,7 @@ const Admission = () => {
                         </Grid>
                         <Grid item sm={9} xs={8}>
                             <input type="text" placeholder="Date/Month/Year" name="entryYear" onChange={collectAdmissionData} className='inputStyle' required/>
-                            <input type="text" placeholder="Enter Your Name" name="name" onChange={collectAdmissionData} className='inputStyle' required/>
-                            <input type="email" placeholder="Enter Your Email" name="name" onChange={collectAdmissionData} className='inputStyle' required/>
-                            <input type="text" placeholder="Enter Your Father Name" name="fatherName" onChange={collectAdmissionData} className='inputStyle'required/>
+                            <input type="text" placeholder="Enter Your Name" name="name" onChange={collectAdmissionData} className='inputStyle' required/>                            <input type="text" placeholder="Enter Your Father Name" name="fatherName" onChange={collectAdmissionData} className='inputStyle'required/>
                             <input type="text" placeholder="Enter Your Mother Name" name="motherName" onChange={collectAdmissionData} className='inputStyle'required/>
                             <input type="number" placeholder="Enter Your Parent Number" name="number" onChange={collectAdmissionData} className='inputStyle'required/>
                             <input type="text" placeholder="Pos., Upzila, Distic" name="parmanetAddress" onChange={collectAdmissionData} className='inputStyle'required/>

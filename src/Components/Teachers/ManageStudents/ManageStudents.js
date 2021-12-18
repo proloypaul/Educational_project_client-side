@@ -8,7 +8,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import UseAuth from '../../../Context/UseAuth';
 import { Container } from '@mui/material';
 
 
@@ -32,25 +31,25 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
 
-const YourClasses = () => {
-    const {user} = UseAuth()
-    const [yourClass, setYourClass] = useState([])
+
+const ManageStudents = () => {
+    const [studentsData, setStudentsData] = useState([])
 
     useEffect(() => {
-        const url =`https://hidden-beyond-75856.herokuapp.com/classes/${user?.email}`
+        const url = `http://localhost:3800/students`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
-                setYourClass(data)
+                setStudentsData(data)
             })
-    }, [user?.email])
+    }, [])
 
 
-    const handleDltBtn = (id) => {
-      const confirmMsg = window.confirm("Are you sure, to deleted this class")
+    const handleDltBtn = id => {
+        const confirmMsg = window.confirm("Are you sure, deleted here admission")
         if(confirmMsg){
-            const url = `http://localhost:3800/classes/${id}`
+            const url = `http://localhost:3800/students/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -58,44 +57,55 @@ const YourClasses = () => {
                 .then(data => {
                     // console.log(data)
                     if(data.deletedCount){
-                        alert("Class deleted successfully!")
-                        const withOutClickId = yourClass.filter(user => user._id !== id)
-                        setYourClass(withOutClickId)
+                        alert("Student Admission deleted successfully!")
+                        const withOutClickId = studentsData.filter(user => user._id !== id)
+                        setStudentsData(withOutClickId)
                     }
                 })
         }else{
-            alert("class Don't deleleted!")
+            alert("Admission Don't deleleted!")
         }
-
     }
     return (
         <div>
             <Container sx={{py: 5}}>
-                <h1 style={{textAlign: "center", fontWeight:"300"}}>Your Classes</h1>
+                <h1 style={{textAlign: "center", fontWeight:"300"}}>Total Admission {studentsData.length}</h1>
                 <TableContainer component={Paper}>
                     <Table aria-label="customized table">
                         <TableHead>
                         <TableRow>
-                            <StyledTableCell>Email</StyledTableCell>
+                            <StyledTableCell>Name</StyledTableCell>
                             <StyledTableCell align="right">Class</StyledTableCell>
-                            <StyledTableCell align="right">Subject</StyledTableCell>
-                            <StyledTableCell align="right">Time</StyledTableCell>
-                            <StyledTableCell align="right">Day</StyledTableCell>
+                            <StyledTableCell align="right">EntryYear</StyledTableCell>
+                            <StyledTableCell align="right">PSC Result</StyledTableCell>
+                            <StyledTableCell align="right">Phone</StyledTableCell>
+                            <StyledTableCell align="right">Gender</StyledTableCell>
+                            <StyledTableCell align="right">PrimarySchool</StyledTableCell>
+                            <StyledTableCell align="right">Father's Name</StyledTableCell>
+                            <StyledTableCell align="right">Mother's Name</StyledTableCell>
+                            <StyledTableCell align="right">Parmanent Address</StyledTableCell>
+                            <StyledTableCell align="right">Present Address</StyledTableCell>
                             <StyledTableCell align="right">Payment</StyledTableCell>
                             <StyledTableCell align="right">Delete</StyledTableCell>
                         </TableRow>
                         </TableHead>
                         <TableBody>
-                        {yourClass.map((row) => (
+                        {studentsData.map((row) => (
                             <StyledTableRow key={row._id}>
                             <StyledTableCell component="th" scope="row">
-                                {row.email}
+                                {row.name}
                             </StyledTableCell>
                             <StyledTableCell align="right">{row.class}</StyledTableCell>
-                            <StyledTableCell align="right">{row.subject}</StyledTableCell>
-                            <StyledTableCell align="right">{row.time}</StyledTableCell>
-                            <StyledTableCell align="right">{row.day}</StyledTableCell>
-                            <StyledTableCell align="right"><Link to={`/pay/${row._id}`}><button>Pay</button></Link></StyledTableCell>
+                            <StyledTableCell align="right">{row.entryYear}</StyledTableCell>
+                            <StyledTableCell align="right">{row.PscResult}</StyledTableCell>
+                            <StyledTableCell align="right">{row.number}</StyledTableCell>
+                            <StyledTableCell align="right">{row.gender}</StyledTableCell>
+                            <StyledTableCell align="right">{row.primarySchool}</StyledTableCell>
+                            <StyledTableCell align="right">{row.fatherName}</StyledTableCell>
+                            <StyledTableCell align="right">{row.motherName}</StyledTableCell>
+                            <StyledTableCell align="right">{row.parmanetAddress}</StyledTableCell>
+                            <StyledTableCell align="right">{row.presentAddress}</StyledTableCell>
+                            <StyledTableCell align="right"><Link to={`/payment/${row._id}`}><button>Pay</button></Link></StyledTableCell>
                             <StyledTableCell align="right"><button onClick={() => handleDltBtn(row._id)} className="dltBtn"><i className="fas fa-trash-alt"></i></button></StyledTableCell>
                             </StyledTableRow>
                         ))}
@@ -103,9 +113,8 @@ const YourClasses = () => {
                     </Table>
                 </TableContainer>
             </Container>
-            
         </div>
     );
 };
 
-export default YourClasses;
+export default ManageStudents;

@@ -14,6 +14,7 @@ import AddHead from "./Components/Teachers/AddHead/AddHead";
 import AddNotice from "./Components/Teachers/AddNotice/AddNotice";
 import Allteacher from "./Components/Teachers/Allteacher/Allteacher";
 import TeacherDetails from "./Components/Teachers/Allteacher/TeacherDetails/TeacherDetails";
+import ManageStudents from "./Components/Teachers/ManageStudents/ManageStudents";
 import Teachers from "./Components/Teachers/Teachers";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRouter from "./Context/PrivateRouter";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path="/yourClasses" element={<YourClasses></YourClasses>}></Route>
+          <Route path="/manageStudents" element={<ManageStudents></ManageStudents>}></Route>
           <Route path="/allTeacher" element={<Allteacher></Allteacher>}></Route>
           <Route path="/teacherDetails/:Id" element={<PrivateRouter><TeacherDetails></TeacherDetails></PrivateRouter>}></Route>
           <Route path="/addNotice" element={<AddNotice></AddNotice>}></Route>
