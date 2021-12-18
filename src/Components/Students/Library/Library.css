@@ -1,0 +1,22 @@
+.library-container{
+    background: gray;
+    padding: 20px 0px;
+}
+.library-content img{
+    border: 0;
+    border-radius: 10px;
+}
+
+.library-title{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.library-title h3{
+    font-weight: 200;
+}

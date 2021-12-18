@@ -2,8 +2,9 @@
     background-image: url('../../../Images/Bg_images/Bg-Three.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height:600px;
+    height:500px;
     color: whitesmoke;
+    padding-top: 20px;
 }
 .notice-title, .notice-description{
     width: 80%;
@@ -36,3 +37,9 @@
     border-radius: 5px;
 }
 
+@media (max-width: 690px) {
+
+    .notice-container{
+        height:600px;
+    }
+}

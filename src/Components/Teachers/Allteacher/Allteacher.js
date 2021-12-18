@@ -24,7 +24,7 @@ const Allteacher = () => {
                                 <img src={teacher.img} alt='Empty!' style={{width: "200px", height: "160px"}}/>
                             </div>
                             <div className='teachers-content'>
-                                <p>Subject: {teacher.subject}</p>
+                                <h3>Subject: {teacher.subject}</h3>
                                 <Link to={`/teacherDetails/${teacher._id}`}><button className='teacherBtn'>Classes</button></Link>
                             </div>
                         </div>

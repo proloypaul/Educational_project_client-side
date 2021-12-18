@@ -1,0 +1,54 @@
+.addReview-container{
+    background-image: url('../../../Images/Bg_images/Bg-Three.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding-top: 20px;
+    border: 0;
+}
+.review-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviewerImg{
+    background: crimson;
+    padding: 30px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 10px solid #08d4a1;
+    border-radius: 10px;
+    color: #08d4a1;
+}
+
+.reviewerImg:hover{
+    background: white;
+    border: 10px solid crimson;
+    border-radius: 10px;
+    color: crimson;
+}
+
+.reviewBtn{
+    width: 50%;
+    background: #08d4a1;
+    color: white;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 200;
+    border-radius: 10px;
+    margin: 40px 0px;
+    cursor: pointer;
+}
+.reviewBtn:hover{
+    background: crimson;
+    width: 30%;
+    color: black;
+}
+
+
+@media (max-width: 690px) {
+    .addReview-container{
+        height: 700px;
+    } 
+}
