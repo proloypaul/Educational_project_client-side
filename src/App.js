@@ -10,6 +10,7 @@ import Login from "./Components/Register/Login/Login";
 import Register from "./Components/Register/Register";
 import Review from "./Components/Review/Review";
 import AddReview from "./Components/Students/AddReview/AddReview";
+import ContactUs from "./Components/Students/ContactUs/ContactUs";
 import Library from "./Components/Students/Library/Library";
 import Students from "./Components/Students/Students";
 import YourClasses from "./Components/Students/YourClasses/YourClasses";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/yourClasses" element={<YourClasses></YourClasses>}></Route>
           <Route path="/library" element={<Library></Library>}></Route>
           <Route path="/addReview" element={<AddReview></AddReview>}></Route>
+          <Route path="/contactUs" element={<ContactUs></ContactUs>}></Route>
           <Route path="/manageStudents" element={<ManageStudents></ManageStudents>}></Route>
           <Route path="/allTeacher" element={<Allteacher></Allteacher>}></Route>
           <Route path="/teacherDetails/:Id" element={<PrivateRouter><TeacherDetails></TeacherDetails></PrivateRouter>}></Route>

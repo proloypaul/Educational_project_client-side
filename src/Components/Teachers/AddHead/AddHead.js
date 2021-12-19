@@ -45,7 +45,7 @@ const AddHead = () => {
                     autoComplete="current-password"
                     variant="standard"
                 />
-                <button type="submit" className="logBtn">Head</button>
+                <button type="submit" className="loginBtn">Head</button>
                 {success ? <Alert severity="success">{headEmail} added as a Head Teacher successfully!</Alert> : <Alert severity="warning">{headEmail} You can't add any head Teacher who don't Register here!</Alert>}
                 </form>
             </Container> 

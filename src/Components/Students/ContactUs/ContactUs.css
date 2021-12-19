@@ -1,0 +1,26 @@
+.contact-container{
+    background-image: url('../../../Images/Bg_images/Bg-Three.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    padding: 20px 0px;
+}
+.contact-form{
+ text-align: center;   
+}
+
+.contact-form input{
+    padding: 20px 5px;
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.contact-form textarea{
+    width: 60%;
+    height: 100px;
+    padding: 25px;
+    border-radius: 5px;
+}
+
