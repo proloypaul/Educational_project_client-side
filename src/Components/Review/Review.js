@@ -23,7 +23,7 @@ const Review = () => {
                         <Paper elevation={12}>
                             <div className='review-box'>
                                 <div className='reviewImg-two'>
-                                    <img src={`data:image/png;base64,${review.image}`} alt='Empty' style={{width: "200px", height: "150px"}}/>
+                                    <img src={`data:image/png;base64,${review.image}`} alt='Empty' style={{width: "200px", height: "200px"}}/>
                                 </div>
                                 <div className='reviewTitle-two'>
                                     <h3>{review.name}</h3>

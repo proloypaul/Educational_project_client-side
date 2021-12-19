@@ -5,3 +5,47 @@
     height: 700px;
     width: 100%;
 }
+
+.banner-message{
+    padding-top: 150px;
+    color: white;
+}
+
+.head-message, .banner-imgTwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-imgTwo{
+    padding-top: 50px; 
+}
+.head-message .banner-img{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.banner-imgTwo img{
+    border: 0;
+    border-radius: 10px;
+}
+.banner-img img{
+    border: 0;
+    border-radius: 50%;
+}
+.head-message .banner-paragraph{
+    width: 400px;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background: rgba(245, 245, 245, 0.904);
+    color: black;
+}
+
+
+@media (max-width: 690px) {
+    .banner-container{
+        height: 1000px;
+    }
+    
+}

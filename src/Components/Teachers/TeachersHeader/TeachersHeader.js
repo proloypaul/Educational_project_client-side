@@ -19,7 +19,7 @@ const TeachersHeader = () => {
                             <li><Link to="/home">Home</Link></li>
                             <li><Link to="/allTeacher">All Teachers</Link></li>
                             {head ? <li><Link to="/addHead">Add Head</Link></li>: ''}
-                            {head ? <li><Link to="/new Teacher">New Teacher</Link></li>: ''}
+                            {head ? <li><Link to="/newTeacher">New Teacher</Link></li>: ''}
                             {head ? <li><Link to="/manageStudents">Manage Students</Link></li>: ''}
                             {head ? <li><Link to="/addNotice">Add Notice</Link></li>: ''}
                         </ul>  

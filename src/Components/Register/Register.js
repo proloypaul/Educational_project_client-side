@@ -67,7 +67,7 @@ const Register = () => {
                             style={{width:"60%", marginBottom:"10px"}}
                         />
                         <p style={{color: "red"}}>{error}</p>
-                        <button style={{width:"60%", marginBottom:"10px"}} type="submit">Register</button>
+                        <button style={{width:"60%", marginBottom:"10px"}} type="submit" className='confirmBtn'>Register</button>
                         <p>Already have an account <Link to="/login">LingIn</Link></p>
                     </form>
                 </Paper>
