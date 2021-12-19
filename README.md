@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Educational Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Requirement of this project:
 
-In the project directory, you can run:
+1. This Project Education related to a school control website 
+2. Home page has some sections like Header, Banner, User Review, Institute, Notice, Students, Teachers, and Footer, 
 
-### `npm start`
+3. When you click the Students section then you can see students some feature Admission, Library, YourClasses, ContactUS, Add Review if you are login then you can Admission to this school
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. A student can admission from the Admission section
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+5. When you click the Teachers section then you can see AllTeacher of this school If you are login then you can take teacher classes. When you confirm your classes then you can see your confirmed classes on the YourClasses section. 
 
-### `npm test`
+6. Teachers feature have other sections like Add Head, Manage Students, Add Notice, New Teacher, those sections only can see head Teacher. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. If you are Head Teacher of this school then you can Manage students, Add another Head Teacher from Add Head section, Add your school notice from Add Notice section, and Add a new Teacher from the New Teacher section. 
 
-### `npm run build`
+8. If Head Teacher adds notice from Add Notice section this notice you can see the Home page Notice section. Again If Head Teacher wants to add a new teacher. He Can add a new teacher from the New Teacher feature  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+9. Head Teacher email: head@teacher.com  password: 123456
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+10. Project link [https://educationalproject-88167.web.app/]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Technology: 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Html
+2. Css
+3. Javascript
+4. React
+5. React Router Dom
+6. Material UI
+7. Firebase (Authentication)
+8. Heroku
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
