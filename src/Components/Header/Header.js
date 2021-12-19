@@ -17,7 +17,7 @@ const Header = () => {
                         <h1>EklashPurHighSchool</h1>
                     </div>
                     <p className='bar-button' onClick={() => setShowBar(!showBar) }><i className="fas fa-bars"></i></p>
-                    <div className="nav-links">
+                    {showBar ? '': <div className="nav-links">
                         <ul>
                             <li><Link to="/home">Home</Link></li>
                             <li><Link to="/institute">Institute</Link></li>
@@ -25,10 +25,10 @@ const Header = () => {
                             <li><Link to="/students">Students</Link></li>
                             <li><Link to="/review">Review</Link></li>
                             <li><Link to="/notice">Notice</Link></li>
-                            <li>{user?.email ? <Link to="/home"><button onClick={signOutProcess}>LogOut</button></Link> : <Link to="/login"><button>LogIn</button></Link>}</li>
+                            <li>{user?.email ? <Link to="/home"><button onClick={signOutProcess} className='loginBtn'>LogOut</button></Link> : <Link to="/login"><button className='loginBtn'>LogIn</button></Link>}</li>
                         </ul>
                         
-                    </div>
+                    </div>}
                 </div>
             </Container>
         </div>

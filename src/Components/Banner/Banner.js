@@ -21,7 +21,7 @@ const Banner = () => {
                                         Standards
                                     </h1>
                                     <div className='banner-imgTwo'>
-                                        <img src={bannerImgTwo} alt='Empty' style={{width: "400px"}}/>
+                                        <img src={bannerImgTwo} alt='Empty' style={{width: "380px"}}/>
                                     </div>
                                 </div>
                             </div>
