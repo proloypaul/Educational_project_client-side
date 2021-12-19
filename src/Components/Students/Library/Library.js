@@ -5,7 +5,7 @@ const Library = () => {
     const [libraryData, setLibraryData] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:3800/library`
+        const url = `https://hidden-beyond-75856.herokuapp.com/library`
         fetch(url)
             .then(res => res.json())
             .then(data => {

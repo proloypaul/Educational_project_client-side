@@ -1,4 +1,4 @@
-import { Alert, Container, Grid } from '@mui/material';
+import {Container, Grid } from '@mui/material';
 import React, { useState } from 'react';
 import './AddReview.css';
 
@@ -6,7 +6,7 @@ const AddReview = () => {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [image, setImage] = useState(null)
-    const [success, setSuccess] = useState(false)
+    // const [success, setSuccess] = useState(false)
 
     const handleReview = event => {
         event.preventDefault()
@@ -24,19 +24,19 @@ const AddReview = () => {
 
 
 
-        const url = `http://localhost:3800/reviews`
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data)
-                if(data.insertedId){
-                    setSuccess(true)
-                }
-            })
-            .catch(error => console.log(error.message))
+        // const url = `https://hidden-beyond-75856.herokuapp.com/reviews`
+        // fetch(url, {
+        //     method: 'POST',
+        //     body: formData
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         // console.log(data)
+        //         if(data.insertedId){
+        //             setSuccess(true)
+        //         }
+        //     })
+        //     .catch(error => console.log(error.message))
 
     }
     return (
@@ -64,7 +64,7 @@ const AddReview = () => {
                     </Grid>
                     <div style={{textAlign: "center" }}>
                         <button type='submit' className='reviewBtn'>Add Review</button>
-                        {success ? <Alert severity="success">Thank You So Much for your compliment !</Alert>: ""}
+                        {/* {success ? <Alert severity="success">Thank You So Much for your compliment !</Alert>: ""} */}
                     </div>
                 </form>
             </Container>

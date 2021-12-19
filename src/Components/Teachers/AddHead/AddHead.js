@@ -14,7 +14,7 @@ const AddHead = () => {
         const headTeacher = {email: headEmail}
 
         // console.log(headTeacher)
-        const url = `http://localhost:3800/users/head`
+        const url = `https://hidden-beyond-75856.herokuapp.com/users/head`
         fetch(url, {
             method: 'PUT',
             headers: {

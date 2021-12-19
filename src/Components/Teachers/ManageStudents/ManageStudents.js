@@ -36,7 +36,7 @@ const ManageStudents = () => {
     const [studentsData, setStudentsData] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:3800/students`;
+        const url = `https://hidden-beyond-75856.herokuapp.com/students`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -49,7 +49,7 @@ const ManageStudents = () => {
     const handleDltBtn = id => {
         const confirmMsg = window.confirm("Are you sure, deleted here admission")
         if(confirmMsg){
-            const url = `http://localhost:3800/students/${id}`
+            const url = `https://hidden-beyond-75856.herokuapp.com/students/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

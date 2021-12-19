@@ -50,7 +50,7 @@ const YourClasses = () => {
     const handleDltBtn = (id) => {
       const confirmMsg = window.confirm("Are you sure, to deleted this class")
         if(confirmMsg){
-            const url = `http://localhost:3800/classes/${id}`
+            const url = `https://hidden-beyond-75856.herokuapp.com/classes/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

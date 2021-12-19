@@ -114,7 +114,7 @@ const UseFirebase = () => {
     // check headTeacher using email
 
     useEffect(() => {
-        const url = `http://localhost:3800/users/${user?.email}`
+        const url = `https://hidden-beyond-75856.herokuapp.com/users/${user?.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
