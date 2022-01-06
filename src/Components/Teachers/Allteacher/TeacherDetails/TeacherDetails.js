@@ -60,7 +60,6 @@ const TeacherDetails = () => {
 
     return (
         <div>
-            <h1>Teachers Details section</h1>
             <Container sx={{my: 10}}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
