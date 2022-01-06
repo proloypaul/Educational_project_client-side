@@ -5,6 +5,11 @@
 .library-content img{
     border: 0;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out; 
+}
+
+.library-content img:hover{
+    transform: translateX(-85px);
 }
 
 .library-title{
@@ -16,6 +21,10 @@
     background: black;
     color: white;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.library-title:hover{
+    transform: translateX(85px);
 }
 .library-title h3{
     font-weight: 200;
