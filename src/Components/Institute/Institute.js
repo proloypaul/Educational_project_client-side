@@ -16,6 +16,7 @@ const Institute = () => {
                             <p>
                                 Describe our Elashpur High School Education system. The second level is High School which incorporates grade 6 to 10. There are both English Medium and Bangla Medium school in Bangladesh. Government prefer Bangla medium schools. Though there are some cadet colleges which are also government owned institutions and they offer English medium studies. Usually, the private schools are offer English medium.
                             </p>
+                            <button className='learnBtn'>Learn More</button>
                         </div>
                        </div>
                     </Grid>
