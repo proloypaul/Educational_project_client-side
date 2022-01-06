@@ -11,6 +11,35 @@
     color: white;
 }
 
+.banner-message h1{
+    color: rgba(245, 245, 245, 0.904);
+    transition: color 0.3s ease-in-out;
+}
+.banner-message h1:hover {
+    color: #22E2D9;
+}
+
+.banner-message .bannerBtn{
+    padding: 20px 0px;
+    text-align: center;
+}
+.banner-message .bannerBtn .learnBtn{
+    padding: 10px 20px;
+    border: 0;
+    background: rgba(245, 245, 245, 0.904);
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.banner-message .bannerBtn :hover{
+    background: #22E2D9;
+    color:rgba(245, 245, 245, 0.904);
+}
+
 .head-message, .banner-imgTwo{
     display: flex;
     justify-content: center;
@@ -23,6 +52,18 @@
     display: flex;
     justify-content: center;
     padding-top: 20px;
+}
+.head-message img{
+    transition: all 0.4s ease-in-out;
+}
+
+.head-message:hover img{
+    transform: scale(0.9);
+}
+
+.head-message:hover .banner-paragraph{
+    color: #FFFFFF;
+    background: #22E2D9;
 }
 .banner-imgTwo img{
     border: 0;
@@ -40,7 +81,9 @@
     margin-top: 20px;
     background: rgba(245, 245, 245, 0.904);
     color: black;
+    transition: all 0.4s ease-in-out;
 }
+
 
 
 @media (max-width: 690px) {

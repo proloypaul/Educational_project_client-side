@@ -23,6 +23,9 @@ const Banner = () => {
                                     <div className='banner-imgTwo'>
                                         <img src={bannerImgTwo} alt='Empty' style={{width: "380px"}}/>
                                     </div>
+                                    <div className='bannerBtn'>
+                                        <button className='learnBtn'>Learn More</button>
+                                    </div>
                                 </div>
                             </div>
                         </Grid>
