@@ -16,8 +16,8 @@ const Notice = () => {
     }, [])
 
     return (
-        <div>
-            <h1 style={{textAlign: 'center'}}>Notice Board</h1>
+        <div className='noticeContainer'>
+            <h1 style={{textAlign: 'center'}}>NotIcE bOarD</h1>
             <Container sx={{my: 10}}>
                         {
                             noticeData.map(notice => <DisplayNotice key={notice._id} notice={notice}></DisplayNotice>)

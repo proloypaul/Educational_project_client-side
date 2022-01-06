@@ -12,7 +12,7 @@ const Institute = () => {
                     <Grid item sm={6} xs={12}>
                        <div className='display-noticeContent'>
                         <div>
-                            <h4>Know about Us</h4>
+                            <h2>Know about Us</h2>
                             <p>
                                 Describe our Elashpur High School Education system. The second level is High School which incorporates grade 6 to 10. There are both English Medium and Bangla Medium school in Bangladesh. Government prefer Bangla medium schools. Though there are some cadet colleges which are also government owned institutions and they offer English medium studies. Usually, the private schools are offer English medium.
                             </p>
@@ -21,7 +21,7 @@ const Institute = () => {
                     </Grid>
                     <Grid item sm={6} xs={12}>
                        <div className='display-noticeImg'>
-                        <img src={instituteImg} alt='Empty' style={{width: "400px"}}/>
+                        <img src={instituteImg} alt='Empty' style={{width: "400px", borderRadius: "5px"}}/>
                        </div>
                     </Grid>
                 </Grid>

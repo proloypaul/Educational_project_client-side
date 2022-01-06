@@ -1,3 +1,8 @@
 .institute-container{
-    margin: 40px 0px;
+    padding: 40px 0px;
+    background: linear-gradient(#000000bd, rgba(0, 0, 0, 0.493));
+    color: #FFFFFF;
+}
+.display-noticeContent h2{
+    color: #000000;
 }

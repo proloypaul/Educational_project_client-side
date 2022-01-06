@@ -1,3 +1,10 @@
+.noticeContainer{
+    background: rgba(255, 255, 255, 0.575);
+}
+
+.noticeContainer h1{
+    font-weight: 400;
+}
 .display-noticeContent, .display-noticeImg{
     display: flex;
     justify-content: center;
